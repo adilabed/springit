@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 @Data
@@ -22,6 +23,8 @@ public class Comment {
     private String body;
 
     // link - mapping
+    @ManyToOne
+    private Link link;
 
 
 }
