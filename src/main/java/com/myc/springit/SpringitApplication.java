@@ -21,7 +21,7 @@ public class SpringitApplication {
         System.out.println("Application started");
     }
 
-    @Bean
+    //@Bean
     CommandLineRunner runner(LinkRepository linkRepository, CommentRepository commentRepository) {
         return args -> {
             Link link = new Link("Getting started with Angular 9", "http://ultimatecourse.com");
