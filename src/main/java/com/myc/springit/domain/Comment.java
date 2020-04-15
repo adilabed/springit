@@ -1,18 +1,19 @@
 package com.myc.springit.domain;
 
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+
+@RequiredArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 @Entity
-@Data
+@Getter @Setter
+@ToString
 @NoArgsConstructor
 public class Comment extends Auditable {
 
@@ -24,7 +25,7 @@ public class Comment extends Auditable {
 
     // link - mapping
     @ManyToOne
+    @NonNull
     private Link link;
-
 
 }

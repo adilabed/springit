@@ -1,16 +1,18 @@
 package com.myc.springit.domain;
 
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+
+@RequiredArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 @Entity
-@Data
+@Getter @Setter
+@ToString
 @NoArgsConstructor
 public class Vote extends Auditable {
 
